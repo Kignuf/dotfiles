@@ -1,0 +1,23 @@
+[user]
+	name = Kevin Roulleau
+	email = kevinroulleau0@gmail.com
+[help]
+	autocorrect = 1
+[core]
+	editor = "code -n --wait --new-window"
+[pull]
+	rebase = preserve
+[fetch]
+	prune = true
+[merge "npm-merge-driver"]
+	name = automatically merge npm lockfiles
+	driver = npx npm-merge-driver merge %A %O %B %P
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[push]
+	followTags = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/

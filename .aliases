@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# Aliases
+alias gs="tig status"
+alias lsa="ls -alhF"
+alias gch="git checkout"
+alias gco="git commit"
+alias gb="git branch -vv"
+alias gl="git log --graph --oneline --all"
+alias wdio="./node_modules/.bin/wdio"
+alias mocha="./node_modules/.bin/mocha"
+alias sourceR="source ~/.bash_profile"
+alias rm="rm -i"
+alias ht="node bin/happn-test.js"

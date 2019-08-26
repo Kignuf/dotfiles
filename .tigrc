@@ -1,0 +1,6 @@
+set main-view-date = relative-compact
+set main-view-author = abbreviated
+set main-view-commit-title-overflow = 50
+set line-graphics = utf-8
+set refresh-mode = auto # auto|periodic
+# set refresh-interval = 5 # to be used with periodic
