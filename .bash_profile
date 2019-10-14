@@ -6,9 +6,9 @@ done;
 unset file;
 
 # Gcloud
-source /Users/kevin.roulleau/.opt/google-cloud-sdk/completion.bash.inc
-source /Users/kevin.roulleau/.opt/google-cloud-sdk/path.bash.inc
-CLOUDSDK_PYTHON=$(which python)
+# source /Users/kevin.roulleau/.opt/google-cloud-sdk/completion.bash.inc
+# source /Users/kevin.roulleau/.opt/google-cloud-sdk/path.bash.inc
+# CLOUDSDK_PYTHON=$(which python)
 
 # Git bash completions
 # https://github.com/bobthecow/git-flow-completion/wiki/Install-Bash-git-completion
