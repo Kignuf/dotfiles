@@ -18,7 +18,7 @@ export ANDROID_TOOLS_BIN=$ANDROID_HOME/tools/bin # mostly for uiautomatorviewer
 export ANDROID_PLATFORM_TOOLS=$ANDROID_HOME/platform-tools
 
 # JDK 1.8
-export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+export JAVA_HOME="$(/usr/libexec/java_home)"
 
 # Python 2
 export PYTHON_2_HOME=/usr/local/opt/python@2/libexec/bin
