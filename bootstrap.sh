@@ -20,7 +20,7 @@ function doIt() {
 if [ "$1" == "--force" ] || [ "$1" == "-f" ]; then
 	doIt;
 else
-	read -pr "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
+	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1 -r;
 	echo "";
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
 		doIt;
