@@ -6,7 +6,7 @@
 [core]
 	editor = "code -n --wait --new-window"
 [pull]
-	rebase = preserve
+	rebase = merges
 [fetch]
 	prune = true
 [merge "npm-merge-driver"]
