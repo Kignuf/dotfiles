@@ -25,6 +25,7 @@ export PYTHON_2_HOME=/usr/local/opt/python@2/libexec/bin
 
 # Node
 export NODE_ENV="dev"
+export DEBUG="true"
 
 # update path
 export PATH=/usr/local/sbin:$PYTHON_2_HOME:$ANDROID_TOOLS:$ANDROID_PLATFORM_TOOLS:$ANDROID_TOOLS_BIN:$JAVA_HOME:$JAVA_HOME/bin:$PATH
