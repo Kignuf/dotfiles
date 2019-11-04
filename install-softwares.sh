@@ -3,8 +3,14 @@
 # Install homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
+# Install java8
+echo "Installing java8"
+brew tap adoptopenjdk/openjdk
+brew cask install adoptopenjdk8
+
 # Install softwares
-brew install git tig bash-completion node hub java ansible terraform awscli &&\
+echo "Installing other softwares"
+brew install git tig bash-completion node hub ansible terraform awscli &&\
 brew cask install iterm2 vscode 1clipboard chrome firefox spotify flux dashlane android-studio appium discord slack docker
 
 # Fira code
