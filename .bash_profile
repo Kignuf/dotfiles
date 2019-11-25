@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-for file in ~/.{path,git-prompt,bash_exports,bash_secret_exports,aliases}; do
+for file in ~/.{path,git-prompt,bash_exports,bash_secret_exports,aliases,bash_local}; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
