@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Locale
+export LC_ALL='en_GB.utf-8'
+
 # EDITOR
 export EDITOR='code' # vs code
 
