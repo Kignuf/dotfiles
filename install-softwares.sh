@@ -10,7 +10,7 @@ brew cask install adoptopenjdk8
 
 # Install softwares
 echo "Installing other softwares"
-brew install git tig bash-completion node hub ansible terraform awscli &&\
+brew install git tig bash-completion node hub ansible terraform awscli gpg &&\
 brew cask install iterm2 vscode 1clipboard chrome firefox spotify flux dashlane android-studio appium discord slack docker
 
 # Fira code
