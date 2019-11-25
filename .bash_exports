@@ -3,6 +3,9 @@
 # Locale
 export LC_ALL='en_GB.utf-8'
 
+# GPG stuff
+export GPG_TTY=$(tty)
+
 # EDITOR
 export EDITOR='code' # vs code
 
