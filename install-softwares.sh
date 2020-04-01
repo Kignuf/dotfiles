@@ -11,7 +11,7 @@ brew cask install adoptopenjdk8
 # Install softwares
 echo "Installing other softwares"
 brew install git tig bash-completion node hub ansible terraform awscli gpg jq the_silver_searcher &&\
-brew cask install iterm2 vscode 1clipboard chrome firefox spotify flux dashlane android-studio appium discord slack docker
+brew cask install iterm2 visual-studio-code google-chrome firefox spotify flux android-studio appium discord slack docker skype whatsapp
 
 # Fira code
 # https://github.com/tonsky/FiraCode/wiki/Installing
