@@ -1,5 +1,5 @@
 {
-    "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'FiraCode-Retina', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
     "cucumberautocomplete.steps": [
         "**/step*definitions/**/*.*s"
