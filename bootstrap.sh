@@ -12,9 +12,10 @@ function doIt() {
 		--exclude "bootstrap.sh" \
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
+		--exclude "install-softwares.sh" \
 		-avh --no-perms . ~;
 	# shellcheck source=/dev/null
-	source "$HOME/.bash_profile";
+	source "$HOME/.zshrc";
 }
 
 if [ "$1" == "--force" ] || [ "$1" == "-f" ]; then

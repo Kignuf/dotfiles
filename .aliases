@@ -1,17 +1,18 @@
 #!/usr/bin/env bash
 
 # Aliases
+# git
 alias gs="tig status"
 alias lsa="ls -alhF"
 alias gch="git checkout"
 alias gco="git commit"
 alias gb="git branch -vv"
 alias gl="git log --graph --oneline --all"
-alias wdio="./node_modules/.bin/wdio"
-alias mocha="./node_modules/.bin/mocha"
-alias sourceR="source ~/.bash_profile"
-alias rm="rm -i"
-alias ht="node bin/happn-test.js"
-alias nw="./node_modules/.bin/nightwatch"
 alias gbr="git branch -r --format='%(color:green)%(authorname): %(color:cyan)%(refname) %(color:white)%(committerdate)' -i --sort=authorname"
 alias gbd="gb | grep \": gone]\" | cut -d \" \" -f3 | xargs git branch -D"
+
+# others
+alias wdio="./node_modules/.bin/wdio"
+alias mocha="./node_modules/.bin/mocha"
+alias sourceR="source ~/.zshrc"
+alias rm="rm -i"

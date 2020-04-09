@@ -1,21 +1,10 @@
 #!/usr/bin/env bash
 
-# Locale
-export LC_ALL='en_GB.utf-8'
-
 # GPG stuff
-export GPG_TTY=$(tty)
+# export GPG_TTY=$(tty)
 
 # EDITOR
 export EDITOR='code' # vs code
-
-# Git status in prompt
-# https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
-export PS1='\[\033[00;32m\]\t\[\033[0m\] \[\033[0m\][\[\033[00;31m\]$?\[\033[0m\]]\[\033[01;38m\]\w\[\033[0m\]\[\033[00;31m\]`__git_ps1`\[\033[0m\] '
-export GIT_PS1_SHOWDIRTYSTATE=1
-# export GIT_PS1_SHOWSTASHSTATE=1
-export GIT_PS1_SHOWUNTRACKEDFILES=1
-export GIT_PS1_SHOWUPSTREAM="auto"
 
 # android SDK
 export ANDROID_HOME=/Users/$USER/Library/Android/sdk
@@ -36,9 +25,9 @@ export DEBUG="true"
 
 # OSX 10.14 issue installing ruby package json 2.2.0
 # https://github.com/castwide/vscode-solargraph/issues/78#issuecomment-538124124
-SDKROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/
-export SDKROOT
-ruby -rrbconfig -e 'puts RbConfig::CONFIG["rubyhdrdir"]' > /dev/null
+# SDKROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/
+# export SDKROOT
+# ruby -rrbconfig -e 'puts RbConfig::CONFIG["rubyhdrdir"]' > /dev/null
 
 # update path
 export PATH=/usr/local/sbin:$PYTHON_2_HOME:$ANDROID_EMULATOR:$ANDROID_TOOLS:$ANDROID_PLATFORM_TOOLS:$ANDROID_TOOLS_BIN:$JAVA_HOME:$JAVA_HOME/bin:$PATH
