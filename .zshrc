@@ -8,7 +8,7 @@ export ZSH="/Users/kignuf/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -111,3 +111,11 @@ source ~/.iterm2_shell_integration.zsh
 
 # https://stackoverflow.com/questions/42554337/cannot-launch-avd-in-emulatorqt-library-not-found#42581852
 function emulator { cd "$(dirname "$(which emulator)")" && ./emulator "$@"; }
+
+# Do not prompt kignuf@Kignuf when on local machine
+# https://github.com/agnoster/agnoster-zsh-theme/issues/39#issuecomment-307338817
+prompt_context() {
+  if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+    prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+  fi
+}
