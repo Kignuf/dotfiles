@@ -3,8 +3,6 @@
 
 cd "$HOME/dotfiles" || exit;
 
-git pull origin master;
-
 function doIt() {
 	rsync --exclude ".git/" \
 		--exclude ".DS_Store" \
@@ -13,9 +11,11 @@ function doIt() {
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
 		--exclude "install-softwares.sh" \
-		-avh --no-perms . ~;
+		-avv -p . ~;
+
 	# shellcheck source=/dev/null
-	source "$HOME/.zshrc";
+	# source ~/.zshrc;
+	echo "Done, please manually source ~/.zshrc"
 }
 
 if [ "$1" == "--force" ] || [ "$1" == "-f" ]; then
