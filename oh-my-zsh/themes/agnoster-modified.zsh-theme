@@ -95,16 +95,6 @@ prompt_context() {
 
 # Git: branch/detached head, dirty status
 prompt_git() {
-  is_up_to_date() {
-    test $(git rev-parse "$current_branch") = $(git rev-parse "$remote_branch")
-  }
-  is_ahead() {
-    test $(git merge-base "$current_branch" "$remote_branch") = $(git rev-parse "$remote_branch")
-  }
-  is_behind() {
-    test $(git merge-base "$current_branch" "$remote_branch") = $(git rev-parse "$current_branch")
-  }
-
   (( $+commands[git] )) || return
   if [[ "$(git config --get oh-my-zsh.hide-status 2>/dev/null)" = 1 ]]; then
     return
@@ -126,28 +116,29 @@ prompt_git() {
       prompt_segment green $CURRENT_FG
     fi
 
-    local current_ref=$(git rev-parse --abbrev-ref HEAD)
     if [[ -e "${repo_path}/BISECT_LOG" ]]; then
       mode=" <B>"
     elif [[ -e "${repo_path}/MERGE_HEAD" ]]; then
       mode=" >M<"
     elif [[ -e "${repo_path}/rebase" || -e "${repo_path}/rebase-apply" || -e "${repo_path}/rebase-merge" || -e "${repo_path}/../.dotest" ]]; then
       mode=" >R>"
-    elif [[ "$current_ref" != "HEAD" ]]; then
-      local current_branch="$current_ref"
+    else
+      local current_branch=$(git rev-parse --abbrev-ref HEAD)
       local remote_branch=$(git rev-parse --abbrev-ref "$current_branch"@{upstream} 2> /dev/null)
-      
       if [[ -n $remote_branch ]]; then
-        if is_up_to_date; then
-          mode=""
-        elif is_behind; then
-          mode=" \u25C0"
-        elif is_ahead; then
-          # ref="%B\u2276 > \u25B6 \u25C0 \u25C6%b $ref"
-          mode=" \u25B6"
-        else
-          mode=" %B\u2276%b"
-        fi
+        local count=$(git rev-list --count --left-right $remote_branch...HEAD 2>/dev/null)
+        case "$count" in
+        "") # no upstream
+            mode="" ;;
+        "0	0") # equal to upstream
+            mode="" ;;
+        "0	"*) # ahead of upstream
+            mode=" \u25B6" ;;
+        *"	0") # behind upstream
+            mode=" \u25C0" ;;
+        *)	    # diverged from upstream
+            mode=" %B\u2276%b" ;;
+        esac
       fi
     fi
 
