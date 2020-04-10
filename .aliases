@@ -16,3 +16,8 @@ alias wdio="./node_modules/.bin/wdio"
 alias mocha="./node_modules/.bin/mocha"
 alias sourceR="source ~/.zshrc"
 alias rm="rm -i"
+
+# Emu / simulator stuff
+alias adb-current-activity="adb shell dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp'"
+# https://www.reddit.com/r/MacOS/comments/cgj1qs/cant_be_opened_because_apple_cannot_check_it_for/
+alias fix-ios-quarantine="xattr -rd com.apple.quarantine" # note: should give path to app after command
