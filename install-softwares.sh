@@ -53,3 +53,4 @@ curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utili
 # oh my zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 compaudit | xargs chmod g-w,o-w # fix permissions warning
+./oh-my-zsh/install.sh # install my custom omzsh stuff
