@@ -10,7 +10,8 @@ function doIt() {
 		--exclude "bootstrap.sh" \
 		--exclude "README.md" \
 		--exclude "LICENSE-MIT.txt" \
-		--exclude "install-softwares.sh" \
+		--exclude "vscode" \
+		--exclude "oh-my-zsh" \
 		-avv -p . ~;
 
 	# shellcheck source=/dev/null
