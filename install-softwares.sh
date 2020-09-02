@@ -6,7 +6,7 @@ set -euxo pipefail
 
 # Install latest zsh
 # https://stackoverflow.com/questions/17648621/how-do-i-update-zsh-to-the-latest-version
-brew install --enable-etcdir zsh
+# brew install zsh
 
 # Install java8
 echo "Installing java8"
