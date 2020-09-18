@@ -21,3 +21,7 @@ alias rm="rm -i"
 alias adb-current-activity="adb shell dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp'"
 # https://www.reddit.com/r/MacOS/comments/cgj1qs/cant_be_opened_because_apple_cannot_check_it_for/
 alias fix-ios-quarantine="xattr -rd com.apple.quarantine" # note: should give path to app after command
+
+function sim() {
+    $(/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/MacOS/Simulator -CurrentDeviceUDID $1 > /dev/null 2>&1 &)
+}
