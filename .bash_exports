@@ -28,5 +28,8 @@ export NODE_ENV="dev"
 # export SDKROOT
 # ruby -rrbconfig -e 'puts RbConfig::CONFIG["rubyhdrdir"]' > /dev/null
 
+# Volta (equivalent to nvm)
+VOLTA_HOME=$HOME/.volta
+
 # update path
-export PATH=/usr/local/sbin:$PYTHON_2_HOME:$ANDROID_EMULATOR:$ANDROID_TOOLS:$ANDROID_PLATFORM_TOOLS:$ANDROID_TOOLS_BIN:$JAVA_HOME:$JAVA_HOME/bin:$PATH
+export PATH=/usr/local/sbin:$PYTHON_2_HOME:$ANDROID_EMULATOR:$ANDROID_TOOLS:$ANDROID_PLATFORM_TOOLS:$ANDROID_TOOLS_BIN:$JAVA_HOME:$JAVA_HOME/bin:$VOLTA_HOME/bin:$PATH

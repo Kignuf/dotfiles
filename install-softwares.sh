@@ -26,7 +26,8 @@ brew install \
     gpg \
     jq \
     the_silver_searcher \
-    carthage
+    carthage \
+    volta
 
 brew cask install \
     iterm2 \
