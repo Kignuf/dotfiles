@@ -19,6 +19,7 @@ brew install \
     git \
     tig \
     node \
+    ruby \
     hub \
     ansible \
     terraform \
