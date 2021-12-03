@@ -24,12 +24,13 @@ export NODE_ENV="dev"
 
 # ruby
 export SDKROOT=$(xcrun --show-sdk-path)
+export RB_GEM_PATH="$HOME/.gem/ruby/2.6.0/bin"
 
 # Volta (equivalent to nvm)
 VOLTA_HOME=$HOME/.volta
 
 # krew
-export KREW="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export KREW="${KREW_ROOT:-$HOME/.krew}/bin"
 
 # update path
-export PATH=/usr/local/sbin:$PYTHON_2_HOME:$ANDROID_EMULATOR:$ANDROID_TOOLS:$ANDROID_PLATFORM_TOOLS:$ANDROID_TOOLS_BIN:$JAVA_HOME:$JAVA_HOME/bin:$VOLTA_HOME/bin:$KREW:$PATH
+export PATH=/usr/local/sbin:$PYTHON_2_HOME:$ANDROID_EMULATOR:$ANDROID_TOOLS:$ANDROID_PLATFORM_TOOLS:$ANDROID_TOOLS_BIN:$JAVA_HOME:$JAVA_HOME/bin:$VOLTA_HOME/bin:$KREW:$RB_GEM_PATH:$PATH
