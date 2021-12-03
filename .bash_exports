@@ -22,11 +22,8 @@ export PYTHON_2_HOME=/usr/local/opt/python@2/libexec/bin
 # Node
 export NODE_ENV="dev"
 
-# OSX 10.14 issue installing ruby package json 2.2.0
-# https://github.com/castwide/vscode-solargraph/issues/78#issuecomment-538124124
-# SDKROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/
-# export SDKROOT
-# ruby -rrbconfig -e 'puts RbConfig::CONFIG["rubyhdrdir"]' > /dev/null
+# ruby
+export SDKROOT=$(xcrun --show-sdk-path)
 
 # Volta (equivalent to nvm)
 VOLTA_HOME=$HOME/.volta
