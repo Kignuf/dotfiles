@@ -37,7 +37,7 @@ export KREW="${KREW_ROOT:-$HOME/.krew}/bin"
 export USE_GKE_GCLOUD_AUTH_PLUGIN=true
 
 # Python
-export POETRY_HOME=/Users/kignuf/.local/bin:
+export POETRY_HOME=/Users/kignuf/.local/bin
 
 # update path
 export PATH=/usr/local/sbin:$PYTHON_2_HOME:$ANDROID_EMULATOR:$ANDROID_TOOLS:$ANDROID_PLATFORM_TOOLS:$ANDROID_TOOLS_BIN:$JAVA_HOME:$JAVA_HOME/bin:$VOLTA_HOME/bin:$KREW:$BREW_RB_GEM_PATH:$RB_GEM_PATH:$POETRY_HOME:$PATH
