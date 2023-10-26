@@ -119,3 +119,6 @@ prompt_context() {
     prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
   fi
 }
+
+# mute bip
+unsetopt BEEP
