@@ -37,7 +37,7 @@ export KREW="${KREW_ROOT:-$HOME/.krew}/bin"
 export USE_GKE_GCLOUD_AUTH_PLUGIN=true
 
 # Python
-export POETRY_HOME=/Users/kignuf/.local/bin
+export POETRY_HOME=/Users/kignuf/.local/bin/bin
 
 # PYENV
 export PYENV_ROOT="$HOME/.pyenv"
