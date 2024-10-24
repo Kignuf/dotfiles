@@ -22,6 +22,15 @@ alias adb-current-activity="adb shell dumpsys window windows | grep -E 'mCurrent
 # https://www.reddit.com/r/MacOS/comments/cgj1qs/cant_be_opened_because_apple_cannot_check_it_for/
 alias fix-ios-quarantine="xattr -rd com.apple.quarantine" # note: should give path to app after command
 
+# k8s
+k8s-seal () {
+	echo -n "$1" | kubeseal --controller-namespace system --controller-name sealed-secrets --raw --namespace $2 --scope namespace-wide
+}
+# usage examples:
+# k8s-seal "toto" parapheur
+# k8s-seal "$(pwgen -s 12 -n 1)" parapheur
+
+
 function sim() {
     $(/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app/Contents/MacOS/Simulator -CurrentDeviceUDID $1 > /dev/null 2>&1 &)
 }
