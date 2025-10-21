@@ -1,2 +1,7 @@
+# Pre-requisites
+- [starfish](https://starship.rs/) 
+
 # Installation procedure
-2. ./install.sh
+```bash
+./install.sh
+```
