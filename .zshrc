@@ -12,5 +12,8 @@ export NODE_ENV="dev"
 # Volta (equivalent to nvm)
 VOLTA_HOME=$HOME/.volta
 
+# completions
+autoload -Uz compinit && compinit
+
 # update path
 export PATH=$VOLTA_HOME/bin:$PATH
