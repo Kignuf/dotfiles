@@ -15,8 +15,18 @@ VOLTA_HOME=$HOME/.volta
 # completions
 autoload -Uz compinit && compinit
 
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+#
+eval "$(pyenv virtualenv-init -)"
+
+# brew bin
+export HOMEBREW_BIN=$(brew --prefix)/bin
+
 # update path
-export PATH=$VOLTA_HOME/bin:/usr/local/bin:$PATH
+export PATH=$VOLTA_HOME/bin:/usr/local/bin:/Users/kevin/.local/bin:$HOMEBREW_BIN:$PATH
 
 # auto suggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh

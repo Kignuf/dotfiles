@@ -3,6 +3,7 @@
 # Aliases
 # git
 alias gs="tig status"
+alias gp="git push"
 alias lsa="ls -alhF"
 alias gch="git checkout"
 alias gco="git commit"
